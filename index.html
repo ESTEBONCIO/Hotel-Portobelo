@@ -8,12 +8,26 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 
 	<!-- Latest compiled and minified CSS -->
+
+	<!-- jdSlider -->
+	<link rel="stylesheet" href="css/plugins/jquery.jdSlider.css">
+
+
+
 	<!--<link rel="stylesheet" href="css/bootstrap.min.css">-->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous"> 
 
 	<!-- jQuery library -->
+
+
+	<!-- jdSlider -->
+	<!-- https://www.jqueryscript.net/slider/Carousel-Slideshow-jdSlider.html -->
+	<script src="js/plugins/jquery.jdSlider-latest.js"></script>
+
+
+
 	<!--<script src="js/jquery.min.js"></script> -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
@@ -257,14 +271,173 @@ MENÚ
 
 </nav>
 
+<!--=====================================
+MENÚ MÓVIL
+======================================-->
+<div class="menuMovil">
+	
+	<div class="row">
+		
+		<div class="col-6">
+			
+			<a href="#modalIngreso" data-toggle="modal">
+				<i class="fas fa-user lead ml-3 mt-4"></i>
+			</a>
 
+		</div>	
+
+		<div class="col-6">
+			
+			<div class="float-right mr-3 mt-3 mr-sm-5 mt-sm-4">
+				
+				<span class="border border-info float-left p-1 bg-info text-white idiomaEs">ES</span>
+				<span class="border border-info float-left p-1 bg-white text-dark idiomaEn">EN</span>
+
+			</div>	
+
+		</div>	
+
+	</div>
+
+	<div class="formReservas py-1 py-lg-2 px-4">
+					
+		<div class="form-group my-4">
+			<select class="form-control form-control-lg">
+				<option>Tipo de habitación</option>
+				<option>Suite</option>
+				<option>Especial</option>
+				<option>Standar</option>
+			</select>
+		</div>
+
+		<div class="form-group my-4">
+			<select class="form-control form-control-lg">
+				<option>Temática de habitación</option>
+				<option>Oriental</option>
+				<option>Contemporánea</option>
+				<option>Africana</option>
+				<option>Clásica</option>
+				<option>Retro</option>
+			</select>
+		</div>
+
+		<div class="row">
+			
+			 <div class="col-6 input-group input-group-lg pr-1">
+			
+				<input type="text" class="form-control datepicker entrada" placeholder="Entrada">
+
+				<div class="input-group-append">
+					
+					<span class="input-group-text p-2">
+						<i class="far fa-calendar-alt small text-gray-dark"></i>
+					</span>
+				
+				</div>
+
+			</div>
+
+			<div class="col-6 input-group input-group-lg pl-1">
+			
+				<input type="text" class="form-control datepicker salida" placeholder="Salida">
+
+				<div class="input-group-append">
+					
+					<span class="input-group-text p-2">
+						<i class="far fa-calendar-alt small text-gray-dark"></i>
+					</span>
+				
+				</div>
+
+			</div>
+
+		</div>
+
+		<input type="button" class="btn btn-block btn-lg my-4 text-white" value="Ver disponibilidad">
+		
+	</div>
+
+	<ul class="nav flex-column mt-4 pl-4 mb-5">
+		
+		<li class="nav-item">
+			<a class="nav-link text-white my-2" href="#planesMovil">Planes</a>
+		</li>
+
+		<li class="nav-item">
+			<a class="nav-link text-white my-2" href="#habitaciones">Habitaciones</a>
+		</li>
+
+		<li class="nav-item">
+			<a class="nav-link text-white my-2" href="#pueblo">Recorrido por el pueblo</a>
+		</li>
+
+		<li class="nav-item">
+			<a class="nav-link text-white my-2" href="#restaurante">Restaurante</a>
+		</li>
+
+		<li class="nav-item">
+			<a class="nav-link text-white my-2" href="#contactenos">Contáctenos</a>
+		</li>
+
+	</ul>
+
+</div>
 
 
 <!--=====================================
 BANNER
 ======================================-->
 
-<div class="banner container-fluid p-0">1</div>
+<div class="banner container-fluid p-0">
+	
+	<div class="jd-slider fade-slider">
+		
+		<div class="slide-inner">
+			
+			<ul class="slide-area">
+				
+				 <li>					
+                    <img src="img/banner01.jpg" width="100%">
+                </li>
+
+                <li>              	
+                    <img src="img/banner02.jpg" width="100%">
+                </li>
+
+                <li>               	
+                    <img src="img/banner03.jpg" width="100%">
+                </li>
+
+                <li>               	
+                    <img src="img/banner04.jpg" width="100%">
+                </li>
+
+			</ul>
+
+		</div>
+
+	 	<div class="controller d-none">
+		 	
+			<a class="auto" href="#">
+
+                <i class="fas fa-play fa-xs"></i>
+                <i class="fas fa-pause fa-xs"></i>
+
+            </a>
+
+            <div class="indicate-area"></div>
+
+	 	</div>
+
+	 	<div class="verMas text-center bg-white rounded-circle d-none d-lg-block" vinculo="#planes">
+    
+    		<i class="fas fa-chevron-down"></i>	
+
+    	</div>
+
+	</div>
+
+</div>
 
 
 

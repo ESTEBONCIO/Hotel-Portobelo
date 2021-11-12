@@ -21,6 +21,7 @@ HEADER
 =============================================*/
 header{
    position:fixed;
+   top: 0;
    z-index:2;
 }
 
@@ -118,15 +119,56 @@ nav.menu li:hover > .nav-link{
    transition:.5s all;
 }
 
+
+/*
+codigo agregado viernes 12 nov
+*/
+
+.menuMovil{
+	display:none;
+	position:fixed;
+	background: rgba(0,0,0,.8);
+	width:100%;
+	height:90vh;
+	z-index:2;
+	overflow-x: hidden;  
+}
+
+.menuMovil .formReservas input[type="button"]{
+	background:black;
+	font-size:16px;
+}
+
+.menuMovil .formReservas{
+	background: rgba(0, 83, 147, .8);
+	position: relative;
+	top:23px;
+}
+
+.menuMovil .nav{
+	background-color: black !important;
+}
+
+
 /*=============================================
 BANNER
 =============================================*/
 
-.banner{
-   background-color: silver;
-   border:2px solid white;
-   height:650px;
+.banner .fade-slider{
+	position:relative;
 }
+
+.banner .verMas{
+	position:absolute;
+	width:60px;
+	line-height: 60px;
+  	bottom: 5%;
+    left: 50%;
+    font-size:30px;
+    transform: translate(-50%, 0%);
+    cursor:pointer;
+}
+
 /*=============================================
 PLANES
 =============================================*/
