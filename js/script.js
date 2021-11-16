@@ -224,6 +224,57 @@ $(".verMas").click(function(){
 
 $(".banner .fade-slider").css({"margin-top":$("header").height()})
 
+//CONFIGURANDO LOS EFECTOS DE LOS PLANES
+let items = document.querySelectorAll('.contenedor .item');
+let bienvenido = document.querySelector('.descripcion .bienvenido');
+let romantico = document.querySelector('.descripcion .romantico');
+let lunaDeMiel = document.querySelector('.descripcion .lunaDeMiel');
+let aventura = document.querySelector('.descripcion .aventura');
+let spa = document.querySelector('.descripcion .spa');
+
+items.forEach(item => { 
+    //EVENTO CUANDO EL MOUSE INGRESA SOBRE EL AREA DEL ITEM
+    item.addEventListener('mouseenter', (e) => {
+        item.children[0].style.height = "25%";
+        if(item.classList.contains('item2')){
+            bienvenido.classList.replace('d-block', 'd-none');
+            romantico.classList.replace('d-none', 'd-block');
+        }
+        if(item.classList.contains('item3')){
+            bienvenido.classList.replace('d-block', 'd-none');
+            lunaDeMiel.classList.replace('d-none', 'd-block');
+        }
+        if(item.classList.contains('item4')){
+            bienvenido.classList.replace('d-block', 'd-none');
+            aventura.classList.replace('d-none', 'd-block');
+        }
+        if(item.classList.contains('item5')){
+            bienvenido.classList.replace('d-block', 'd-none');
+            spa.classList.replace('d-none', 'd-block');
+        }
+    });
+
+    //EVENTO CUANDO EL MOUSE SALE DEL AREA DEL ITEM
+    item.addEventListener('mouseleave', (e) => {
+        item.children[0].style.height = "100%";
+        if(item.classList.contains('item2')){
+            romantico.classList.replace('d-block', 'd-none');
+            bienvenido.classList.replace('d-none', 'd-block');
+        }
+        if(item.classList.contains('item3')){
+            lunaDeMiel.classList.replace('d-block', 'd-none');
+            bienvenido.classList.replace('d-none', 'd-block');
+        }
+        if(item.classList.contains('item4')){
+            aventura.classList.replace('d-block', 'd-none');
+            bienvenido.classList.replace('d-none', 'd-block');
+        }
+        if(item.classList.contains('item5')){
+            spa.classList.replace('d-block', 'd-none');
+            bienvenido.classList.replace('d-none', 'd-block');
+        }
+    });
+});
 
 
 
