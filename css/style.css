@@ -114,10 +114,6 @@ nav.menu li > .nav-link{
    transition:.5s all;
 }
 
-nav.menu li:hover > .nav-link{
-   background:#197DB1;
-   transition:.5s all;
-}
 
 
 /*
@@ -172,38 +168,95 @@ BANNER
 /*=============================================
 PLANES
 =============================================*/
-.planes .grid-container{
-   display:grid;
+/*
+    ESTILOS A .planes
+*/
+.planes .titulo {
+   font-size: 40px;
+   font-weight: 300;
+   text-transform: uppercase;
+   text-align: center;
+   margin-bottom: 2rem;
+ }
+ .planes .contenido {
+   position: relative;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   height: 100%;
+   width: 100%;
+   transition: all 0.5s ease;
+ }
+ .planes .contenido::before {
+   content: "";
+   background-color: rgba(0, 0, 0, 0.7);
+   position: absolute;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   height: 100%;
+ }
+ .planes .contenido h2 {
+   z-index: 2;
+ }
+ .planes .item {
+   overflow: hidden;
+   transition: all 0.3s ease;
+   cursor: pointer;
+ }
+ .planes .descripcion {
+   grid-area: texto;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   padding: 2rem;
+ }
+ .planes .item2 {
+   grid-area: romantico;
+   background-image: url(../img/plan-romantico.png);
+   background-position: center;
+   background-size: cover;
+ }
+ .planes .item3 {
+   grid-area: lunaDeMiel;
+   background-image: url(../img/luna-de-miel.png);
+   background-position: center;
+   background-size: cover;
+ }
+ .planes .item4 {
+   grid-area: aventura;
+   background-image: url(../img/plan-aventura.png);
+   background-position: center;
+   background-size: cover;
+ }
+ .planes .item5 {
+   grid-area: spa;
+   background-image: url(../img/plan-spa.png);
+   background-position: center;
+   background-size: cover;
+ }
+ .planes .contenedor {
+   display: grid;
    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-}
-
-.planes .grid-item{
-   background-color: silver;
-   border:2px solid white;
-   text-align:center;
-   height: 300px;
-}
-
-.planes .grid-item:nth-child(1){
-   grid-column: 1 / span 3;
-}
-
-.planes .grid-item:nth-child(2){
-   grid-column: 4 / span 3;
-}
-
-.planes .grid-item:nth-child(3){
-   grid-column: 1 / span 2;
-}
-
-.planes .grid-item:nth-child(4){
-   grid-column: 3 / span 2;
-}
-
-.planes .grid-item:nth-child(5){
-   grid-column: 5 / span 2;
-}
-
+   grid-template-rows: 300px 300px;
+   grid-template-areas: "texto texto texto romantico romantico romantico" "lunaDeMiel lunaDeMiel aventura aventura spa spa";
+ }
+/*
+    ESTILOS A .menuDeNavegacion
+*/
+.menuDeNavegacion {
+   background-color: #d62c2c;
+   z-index: 2;
+   color: #fff;
+   opacity: 0;
+   display: none;
+   position: fixed;
+   top: 55px;
+   transition: all 0.3s ease-in-out;
+ }
+ .menuDeNavegacion .nav .nav-item:hover {
+   background-color: #197DB1;
+ }
 /*
     ESTILOS A .planes
 */
