@@ -15,6 +15,15 @@ a:visited, a:link, a:focus, a:hover, a:active{
    list-style:none;
    text-decoration: none;
 }
+body {
+   overflow-x: hidden;
+   position: relative;
+ }
+ 
+ html {
+   scroll-behavior: smooth;
+ }
+ 
 
 /*=============================================
 HEADER
@@ -456,14 +465,26 @@ mas codigo agregado miercole 10 nov
 /*=============================================
 SCROLL UP
 =============================================*/
-#scrollUp{
+/*#scrollUp{
    bottom: 20px;
    right: 20px;
    width: 50px;
    height: 50px;
    background: url(../img/flecha.jpg);
-}
-
+}*/
+#scrollUp {
+   display: none;
+   position: fixed;
+   bottom: 3%;
+   right: 3%;
+   height: 50px;
+   width: 50px;
+   border-radius: 50%;
+   background-color: black;
+   z-index: 15;
+   background-image: url(../img/flecha.jpg);
+   transition: all 0.3s ease;
+ }
 
 
 
