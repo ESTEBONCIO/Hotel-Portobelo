@@ -6,28 +6,20 @@
 	<title>Document</title>
 	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Ubuntu&display=swap" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
-
-	<!-- Latest compiled and minified CSS -->
-
-	<!-- jdSlider -->
+<!-- jdSlider -->
 	<link rel="stylesheet" href="css/plugins/jquery.jdSlider.css">
-
-
-
+	<!-- Latest compiled and minified CSS -->
 	<!--<link rel="stylesheet" href="css/bootstrap.min.css">-->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous"> 
 
+
+	<!--=====================================
+	VÍNCULOS JAVASCRIPT
+	======================================-->
+	
 	<!-- jQuery library -->
-
-
-	<!-- jdSlider -->
-	<!-- https://www.jqueryscript.net/slider/Carousel-Slideshow-jdSlider.html -->
-	<script src="js/plugins/jquery.jdSlider-latest.js"></script>
-
-
-
 	<!--<script src="js/jquery.min.js"></script> -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
@@ -38,7 +30,9 @@
 	<!-- Latest compiled JavaScript -->
 	<!--<script src="js/bootstrap.min.js"></script>-->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
+<!-- jdSlider -->
+	<!-- https://www.jqueryscript.net/slider/Carousel-Slideshow-jdSlider.html -->
+	<script src="js/plugins/jquery.jdSlider-latest.js"></script>
 	<!-- codigo agre-->
 
 	<!-- bootstrap datepicker -->
@@ -271,6 +265,7 @@ MENÚ
 
 </nav>
 
+
 <!--=====================================
 MENÚ MÓVIL
 ======================================-->
@@ -303,9 +298,9 @@ MENÚ MÓVIL
 					
 		<div class="form-group my-4">
 			<select class="form-control form-control-lg">
-				<option>Tipo de habitación</option>
-				<option>Suite</option>
-				<option>Especial</option>
+				<option>Tipo de servicio</option>
+				<option>Mantenimiento</option>
+				<option>Cotisacion</option>
 				<option>Standar</option>
 			</select>
 		</div>
@@ -383,7 +378,6 @@ MENÚ MÓVIL
 
 </div>
 
-
 <!--=====================================
 BANNER
 ======================================-->
@@ -431,15 +425,15 @@ BANNER
 
 	 	<div class="verMas text-center bg-white rounded-circle d-none d-lg-block" vinculo="#planes">
     
-    		<a href="#planes">
-				<i class="fas fa-chevron-down"></i>	
-			</a>
+    		<i class="fas fa-chevron-down"></i>	
 
     	</div>
 
 	</div>
 
 </div>
+
+
 
 <!--=====================================
 PLANES
@@ -515,8 +509,6 @@ PLANES
 
 </div>
 
-
-
 <!--=====================================
 HABITACIONES
 ======================================-->
@@ -531,19 +523,67 @@ HABITACIONES
 			
 			<div class="col-12 col-lg-4 pb-3 px-0 px-lg-3">
 
-				<main>1</main>
+				<a style="text-decoration:none" href="habitaciones.html">
+					
+					<figure class="text-center">
+						
+						<img src="img/habitacion01.png" class="img-fluid" width="100%">
+
+						<p class="small py-4 mb-0">Lorem ipsum dolor sit amet</p>
+
+						<h3 class="py-2 text-gray-dark mb-0"color=>DESDE $300 USD</h3>
+
+						<h5 class="py-2 text-gray-dark border">Ver detalles <i class="fas fa-chevron-right ml-2"></i></h5>
+						
+						<h1 class="text-white p-3 mx-auto w-50 lead" style="background:#847059">SUITE</h1>
+
+					</figure>
+
+				</a>
 
 			</div>
 
 			<div class="col-12 col-lg-4 pb-3 px-0 px-lg-3">
 
-				<main>2</main>
+				<a style="text-decoration:none" href="habitaciones.html">
+					
+					<figure class="text-center">
+						
+						<img src="img/habitacion02.png" class="img-fluid" width="100%">
+
+						<p class="small py-4 mb-0">Lorem ipsum dolor sit amet</p>
+
+						<h3 class="py-2 text-gray-dark mb-0">DESDE $200 USD</h3>
+
+						<h5 class="py-2 text-gray-dark border">Ver detalles <i class="fas fa-chevron-right ml-2"></i></h5>
+						
+						<h1 class="text-white p-3 mx-auto w-50 lead" style="background:#197DB1">ESPECIAL</h1>
+
+					</figure>
+
+				</a>
 
 			</div>
 
 			<div class="col-12 col-lg-4 pb-3 px-0 px-lg-3">
 
-				<main>3</main>
+				<a style="text-decoration:none" href="habitaciones.html">
+					
+					<figure class="text-center">
+						
+						<img src="img/habitacion03.png" class="img-fluid" width="100%">
+
+						<p class="small py-4 mb-0">Lorem ipsum dolor sit amet</p>
+
+						<h3 class="py-2 text-gray-dark mb-0">DESDE $150 USD</h3>
+
+						<h5 class="py-2 text-gray-dark border">Ver detalles <i class="fas fa-chevron-right ml-2"></i></h5>
+						
+						<h1 class="text-white p-3 mx-auto w-50 lead" style="background:#2F7D84">STANDAR</h1>
+
+					</figure>
+
+				</a>
 
 			</div>
 
@@ -552,43 +592,195 @@ HABITACIONES
 	</div>
 
 </div>
-
 <!--=====================================
 PLANES MÓVIL
 ======================================-->
 
-<div class="d-block d-lg-none planesMovil bg-white">
+<div class="d-block d-lg-none planesMovil jd-slider bg-white" id="planesMovil">
 
 	<h1 class="text-center py-3">PLANES</h1>
 
-	<div class="grid-container px-5">
-		
-		<div class="grid-item">1</div>
+	 <div class="slide-inner">
+	 	
+		 <ul class="slide-area">
+		 	
+			<li>
+				
+				<a href="#modalPlanes" data-toggle="modal" descripcion="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas suscipit quis eligendi voluptatibus dolore libero quasi delectus odit impedit optio eius corporis cumque numquam aliquid repudiandae quisquam dolor explicabo, totam.">
+					
+					<img src="img/plan-romantico.png">
+					<h6 class="py-2 text-center">ROMÁNTICO</h6>
 
-	</div>
-	
+				</a>
+
+			</li>
+
+			<li>
+				
+				<a href="#modalPlanes" data-toggle="modal" descripcion="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat dicta fugiat nihil amet officiis, atque molestiae velit, quod repudiandae asperiores illum accusantium ullam, necessitatibus excepturi inventore, mollitia est vitae impedit.">
+                	<img src="img/luna-de-miel.png">
+                	<h6 class="py-2 text-center">LUNA DE MIEL</h6>
+                </a>
+
+			</li>
+
+			<li>
+				
+			  	<a href="#modalPlanes" data-toggle="modal" descripcion="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt blanditiis nulla expedita nostrum vero. Laborum repudiandae numquam mollitia earum natus ut delectus quas, iste unde doloribus suscipit qui, voluptate perspiciatis.">
+                	<img src="img/plan-aventura.png">
+                	<h6 class="py-2 text-center">AVENTURA</h6>
+                </a>
+
+			</li>
+
+			<li>
+				
+			  <a href="#modalPlanes" data-toggle="modal" descripcion="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam quibusdam magni atque provident, quaerat libero harum possimus. Illum iure magni voluptate, quos amet! Ipsam, sit, sapiente. Cumque est officiis in!">
+                	<img src="img/plan-spa.png">
+                	<h6 class="py-2 text-center">SPA</h6>
+                </a>
+
+			</li>
+
+
+		 </ul>
+
+	 	<a class="prev" href="#">
+            <i class="fas fa-angle-left text-muted"></i>
+        </a>
+
+        <a class="next" href="#">
+            <i class="fas fa-angle-right text-muted"></i>
+        </a>
+
+ 	</div>
+
+  	<div class="controller">
+
+        <div class="indicate-area"></div>
+
+    </div>
+			   
 </div>
 
 <!--=====================================
 RECORRIDO POR EL PUEBLO
 ======================================-->
 
-<div class="recorridoPueblo container-fluid bg-white" id="pueblo">
+<div class="recorridoPueblo container-fluid bg-white pb-5" id="pueblo">
 	
 	<div class="container">
 
-		<h1 class="pt-5 text-center">RECORRIDO POR EL PUEBLO</h1>		
+		<h1 class="pt-5 text-center">RECORRIDO POR EL PUEBLO</h1>	
 
-		<div class="grid-container pt-4 pb-5 px-0 px-lg-5">
-			
-			<div class="grid-item">1</div>
+			<div class="jd-slider slidePueblo">
+				
+				<div class="slide-inner">
+					
+					<ul class="slide-area">
 
-			<div class="grid-item">2</div>
+						<li>
+						
+							<div class="grid-container pt-4 pb-1 pb-lg-3 px-0 px-lg-5">
+				
+								<div class="grid-item">
+									
+									<img src="img/pueblo01a.png" class="img-fluid" width="100%">
 
-			<div class="grid-item d-none d-lg-block">3</div>
-			
-		</div>		
-		
+								</div>
+
+								<div class="grid-item">
+									
+									<h1 class="mt-4 mb-0 my-lg-2">LOREM IPSUM</h1>
+
+									<p class="small p-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo velit quis iusto magnam cupiditate dolorum repudiandae tempore cum minus eos a iure, officiis, eius, consequuntur unde nulla, enim quibusdam beatae.</p>
+
+								</div>
+
+								<div class="grid-item d-none d-lg-block">
+									
+									<img src="img/pueblo01b.png" class="img-fluid" width="100%">
+
+								</div>
+								
+							</div>
+
+						</li>
+
+						<li>
+						
+							<div class="grid-container pt-4 pb-1 pb-lg-3 px-0 px-lg-5">
+				
+								<div class="grid-item">
+									
+									<img src="img/pueblo02a.png" class="img-fluid" width="100%">
+
+								</div>
+
+								<div class="grid-item">
+									
+									<h1 class="mt-4 mb-0 my-lg-2">LOREM IPSUM</h1>
+
+									<p class="small p-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo velit quis iusto magnam cupiditate dolorum repudiandae tempore cum minus eos a iure, officiis, eius, consequuntur unde nulla, enim quibusdam beatae.</p>
+
+								</div>
+
+								<div class="grid-item d-none d-lg-block">
+									
+									<img src="img/pueblo02b.png" class="img-fluid" width="100%">
+
+								</div>
+								
+							</div>
+
+						</li>	
+
+						<li>
+						
+							<div class="grid-container pt-4 pb-1 pb-lg-3 px-0 px-lg-5">
+				
+								<div class="grid-item">
+									
+									<img src="img/pueblo03a.png" class="img-fluid" width="100%">
+
+								</div>
+
+								<div class="grid-item">
+									
+									<h1 class="mt-4 mb-0 my-lg-2">LOREM IPSUM</h1>
+
+									<p class="small p-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo velit quis iusto magnam cupiditate dolorum repudiandae tempore cum minus eos a iure, officiis, eius, consequuntur unde nulla, enim quibusdam beatae.</p>
+
+								</div>
+
+								<div class="grid-item d-none d-lg-block">
+									
+									<img src="img/pueblo03b.png" class="img-fluid" width="100%">
+
+								</div>
+								
+							</div>
+
+						</li>			
+
+					</ul>
+
+				</div>
+
+				<a class="d-none d-md-block prev" href="#">
+	            	<i class="fas fa-angle-left fa-2x" style="color:#3E92BD"></i>
+		        </a>
+
+		        <a class="d-none d-md-block next" href="#">
+		            <i class="fas fa-angle-right fa-2x" style="color:#3E92BD"></i>
+		        </a>
+
+		        <div class="controller">
+		            <div class="indicate-area"></div>
+		        </div>
+
+			</div>	
+	
 	</div>
 
 </div>
@@ -704,7 +896,42 @@ FOOTER
 
 </footer>
 
+<!--=====================================
+VENTANA MODAL PLANES
+======================================-->
 
+<div class="modal" id="modalPlanes">
+	
+	 <div class="modal-dialog">
+			
+		<div class="modal-content">
+			
+	      	<div class="modal-header">
+	        	<h4 class="modal-title"></h4>
+	        	<button type="button" class="close" data-dismiss="modal">&times;</button>
+	      	</div>
+			
+	 		<div class="modal-body">
+       			
+       			<img src="" class="img-thumbnail">
+    			
+    			<p class="py-3"></p>
+       			
+       			<div class="text-center">
+        			<a href="habitaciones.html" class="btn btn-primary text-center">Separa tu habitación</a>
+        		</div>
+
+      		</div>
+
+  		 	<div class="modal-footer">
+        		<button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+      		</div>
+
+		</div> 	
+
+	 </div>
+
+</div>
 <!--codigo agregado para los modales -->
 <!--=====================================
 VENTANA MODAL INGRESO

@@ -183,7 +183,6 @@ if(window.matchMedia("(max-width:768px)").matches){
 	})
 
 }
-
 /*=============================================
 SCROLL UP
 =============================================*/
@@ -194,92 +193,62 @@ $.scrollUp({
 	easingType: "easeOutQuint"
 })
 
+
+
 /*=============================================
-SLIDE BANNER
+INTERACCIÓN PLANES
 =============================================*/
 
-$('.fade-slider').jdSlider({
+$(".planes .grid-item").mouseover(function() {
 
-    isSliding: false,
-    isAuto: true,
-    isLoop: true,
-    isDrag: false,
-    interval: 7000,
-    isCursor: false,
-    speed: 3000
+	$(this).children("figure").css({"height":"25%", "transition":".5s all"})
+
+	$(".tituloPlan").html($(this).children("figure").children("h1").html());
+
+	$(".descripcionPlan").html($(this).children("figure").children("h1").attr("descripcion"));
 
 })
 
-$(".verMas").click(function(){
 
-	var vinculo = $(this).attr("vinculo");
+$(".planes .grid-item").mouseout(function() {
 
-	$("html, body").animate({
+	$(this).children("figure").css({"height":"100%", "transition":".5s all"})
 
-		scrollTop: $(vinculo).offset().top - 60
+	$(".tituloPlan").html($(".tituloPlan").attr("tituloPlan"));
 
-	}, 1000, "easeInOutBack")
+	$(".descripcionPlan").html($(".descripcionPlan").attr("descripcionPlan"));
+
+})
+/*=============================================
+PLANES MOVIL
+=============================================*/
+
+$('.planesMovil').jdSlider({
+	wrap: '.slide-inner',
+    slideShow: 3,
+    slideToScroll: 3,
+    isLoop: false
+})
+
+$(".planesMovil li").click(function(){
+
+	$(".modal-title").html($(this).children("a").children("h6").html());
+	$(".modal-body img").attr("src", $(this).children("a").children("img").attr("src"));
+	$(".modal-body p").html($(this).children("a").attr("descripcion"));
 
 })
 
-$(".banner .fade-slider").css({"margin-top":$("header").height()})
 
-//CONFIGURANDO LOS EFECTOS DE LOS PLANES
-let items = document.querySelectorAll('.contenedor .item');
-let bienvenido = document.querySelector('.descripcion .bienvenido');
-let romantico = document.querySelector('.descripcion .romantico');
-let lunaDeMiel = document.querySelector('.descripcion .lunaDeMiel');
-let aventura = document.querySelector('.descripcion .aventura');
-let spa = document.querySelector('.descripcion .spa');
+$(".planes .grid-item").click(function(){
 
-items.forEach(item => { 
-    //EVENTO CUANDO EL MOUSE INGRESA SOBRE EL AREA DEL ITEM
-    item.addEventListener('mouseenter', (e) => {
-        item.children[0].style.height = "25%";
-        if(item.classList.contains('item2')){
-            bienvenido.classList.replace('d-block', 'd-none');
-            romantico.classList.replace('d-none', 'd-block');
-        }
-        if(item.classList.contains('item3')){
-            bienvenido.classList.replace('d-block', 'd-none');
-            lunaDeMiel.classList.replace('d-none', 'd-block');
-        }
-        if(item.classList.contains('item4')){
-            bienvenido.classList.replace('d-block', 'd-none');
-            aventura.classList.replace('d-none', 'd-block');
-        }
-        if(item.classList.contains('item5')){
-            bienvenido.classList.replace('d-block', 'd-none');
-            spa.classList.replace('d-none', 'd-block');
-        }
-    });
+	$(".modal-title").html($(this).children("figure").children("h1").html());
+	$(".modal-body img").attr("src", $(this).children("img").attr("src"));
+	$(".modal-body p").html($(this).children("figure").children("h1").attr("descripcion"));
 
-    //EVENTO CUANDO EL MOUSE SALE DEL AREA DEL ITEM
-    item.addEventListener('mouseleave', (e) => {
-        item.children[0].style.height = "100%";
-        if(item.classList.contains('item2')){
-            romantico.classList.replace('d-block', 'd-none');
-            bienvenido.classList.replace('d-none', 'd-block');
-        }
-        if(item.classList.contains('item3')){
-            lunaDeMiel.classList.replace('d-block', 'd-none');
-            bienvenido.classList.replace('d-none', 'd-block');
-        }
-        if(item.classList.contains('item4')){
-            aventura.classList.replace('d-block', 'd-none');
-            bienvenido.classList.replace('d-none', 'd-block');
-        }
-        if(item.classList.contains('item5')){
-            spa.classList.replace('d-block', 'd-none');
-            bienvenido.classList.replace('d-none', 'd-block');
-        }
-    });
-});
+})
 
+/*=============================================
+RECORRIDO POR EL PUEBLO
+=============================================*/
 
-
-
-
-
-
-
+$('.slidePueblo').jdSlider();
