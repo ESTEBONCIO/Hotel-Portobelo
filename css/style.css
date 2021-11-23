@@ -154,7 +154,15 @@ codigo agregado viernes 12 nov
 	background-color: black !important;
 }
 
+/*=============================================
+BANNER
+=============================================*/
 
+.banner{
+	background-color: silver;
+	border:2px solid white;
+	height:650px;
+}
 /*=============================================
 BANNER
 =============================================*/
