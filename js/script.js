@@ -252,3 +252,44 @@ RECORRIDO POR EL PUEBLO
 =============================================*/
 
 $('.slidePueblo').jdSlider();
+
+
+/*=============================================
+RESTAURANTE
+=============================================*/
+
+$(".restaurante .carta div").hide();
+
+if(window.matchMedia("(max-width:768px)").matches){
+
+	$(".restaurante .verCarta").click(function(){	
+
+		$(".restaurante .bloqueRestaurante").slideToggle("fast")
+
+		$(".restaurante .carta div").slideToggle("fast");	
+
+		$(".restaurante .carta div").css({"background":"rgba(0,0,0,0.7)"})
+
+		$(".contactenos").css({"margin-top":"0px"})
+	})
+
+	$(".restaurante .volverCarta").click(function(){	
+
+		$(".restaurante .bloqueRestaurante").slideToggle("fast")
+
+		$(".restaurante .carta div").slideToggle("fast");	
+
+		$(".contactenos").css({"margin-top":"-80px"})
+	})
+
+}else{
+
+	$(".restaurante .verCarta").click(function(){		
+
+		$(".restaurante .carta div").slideToggle("fast")
+
+		$(".restaurante .carta div").css({"background":"rgba(0,0,0,0.7)"})
+
+	})
+
+}

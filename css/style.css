@@ -2,7 +2,7 @@
 	font: family: 'Ubuntu', sans-serif;
 }
 
-h1,h2,h3,h4,h5,h6,p,input,textarea,select,button{
+h1,h2,h3,h4,h5,h6,input,textarea,select,button{
    font-family: 'Open Sans, sans-serif';
    font-weight: 100;
 }
@@ -283,6 +283,7 @@ RECORRIDO PUEBLO
 =============================================*/
 
 .recorridoPueblo .grid-container{
+   
 	display:grid;
 	grid-template-columns: 1fr 2fr;
 }
@@ -309,41 +310,42 @@ RESTAURANTE
 =============================================*/
 
 .fondoRestaurante{
-   position:fixed;
-   z-index:-1;
-   top:0;
-   left:0;
-   height:500px;
+	position:fixed;
+	z-index:-1;
+	top:0;
+	left:0;
+	height:1000px;
+	background-color:white;
+	background-image: url("../img/restaurante.png");
+	background-position: center top;
+	background-repeat: repeat-y;
 }
 
 .restaurante .grid-container{
-   display:grid;
-   grid-template-columns: 2fr 1fr;
+	display:grid;
+	grid-template-columns: 2fr 1fr;
 }
 
 .restaurante .grid-item{
-   background-color: silver;
-   border:2px solid white;
-   text-align:center;
-}
-
-.restaurante .grid-item:nth-child(1){
-   height:500px;
-
+	text-align:center;
+	color:white;
 }
 
 .restaurante .grid-item:nth-child(2){
-   position:relative; 
-   z-index:1;
-   top:-40px; 
-   height:580px;
+	position:relative; 
+	z-index:1;
+	top:-60px; 
+	height:600px;
+	background:#847059;
 }
 
+
 .restaurante .carta div[class*="col"]{
-   background-color: silver;
-   border:2px solid white;
-   text-align:center;
-   height:200px;
+	text-align:center;
+}
+
+.restaurante .carta img{
+	border:3px solid white;
 }
 /*=============================================
 MAPA
@@ -358,7 +360,7 @@ MAPA
    width:400px;
    right:10%; 
    top:10%; 
-   background-color: silver;
+   background-color: #FFCC29;
    height:370px;
 }
 
@@ -367,17 +369,24 @@ FOOTER
 =============================================*/
 
 footer .grid-container{
-   display:grid;
-   grid-template-columns: 2fr 4fr 2fr;
+	display:grid;
+	grid-template-columns: 2fr 4fr 2fr;
 }
 
 footer .grid-item{
-   background-color: silver;
-   border:2px solid white;
-   text-align:center;
-   height: 70px;
+	background-color: #197DB1;
+	text-align:center;
+	color:white;
 }
 
+.redesMovil{
+	visibility: hidden;
+	position: fixed;
+	bottom:0px;
+	z-index:2;
+	width:100%;
+	background: #197DB1;
+}
 
 
 /*
@@ -432,6 +441,18 @@ TABLET VERTICAL (MD revisamos en 768px hacia abajo)
 	   grid-template-columns: 1fr;
    }
 
+   .restaurante .grid-container{
+		grid-template-columns: 1fr;
+	}
+
+	.restaurante h1{
+		font-size:30px;
+	}
+
+	.restaurante .grid-item:nth-child(2){
+		height:400px;
+		background:rgba(81, 69, 55, .9);
+	}
    .restaurante .grid-container{
 	   grid-template-columns: 1fr;
    }
